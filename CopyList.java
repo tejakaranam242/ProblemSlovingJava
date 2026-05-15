@@ -1,17 +1,27 @@
+class listNode{
+    int data;
+    listNode next;
+    listNode random;
+    listNode(int data){
+        this.data = data;
+        this.next = null;
+        this.random = null;
+    }
+}
 public class CopyList {
-    public void addBetweenNodes(Node head){
-        Node current = head;
+    public void addBetweenNodes(listNode head){
+        listNode current = head;
         while(current!=null){
-            Node copyNode = new Node(current.data);
+            listNode copyNode = new listNode(current.data);
             copyNode.next = current.next;
             current.next = copyNode;
             current = copyNode.next;
         }
     }
-    public void connectToRandom(Node head){
-        Node current=head;
+    public void connectToRandom(listNode head){
+        listNode current=head;
         while(current!=null){
-            Node copyNode = current.next;
+            listNode copyNode = current.next;
             if(current.random!=null){
                 copyNode.random = current.random.next;
             }
@@ -21,10 +31,10 @@ public class CopyList {
             current = current.next.next;
         }
     }
-    public Node getCloneList(Node head){
-        Node current = head;
-        Node dummy = new Node(-1);
-        Node res = dummy;
+    public listNode getCloneList(listNode head){
+        listNode current = head;
+        listNode dummy = new listNode(-1);
+        listNode res = dummy;
         while(current!=null){
             res.next = current.next;
             res = res.next;
@@ -34,7 +44,7 @@ public class CopyList {
         }
         return dummy.next;
     }
-    public Node cloneLinkedList(Node head) {
+    public listNode cloneLinkedList(listNode head) {
         if(head== null) return head;
         addBetweenNodes(head);
         connectToRandom(head);
