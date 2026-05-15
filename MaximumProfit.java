@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class MaximumProfit {
@@ -8,7 +11,7 @@ public class MaximumProfit {
             int diff = Math.abs(a[i]-b[i]);
             tasks.add(new int[]{diff,a[i],b[i]});
         }
-        Collections.sort(tasks,(t1,t2)->t2[0]-t1[0]);
+        Collections.sort(tasks,(t1, t2)->t2[0]-t1[0]);
         int profit = 0;
         for(int[] task:tasks){
             int ai = task[1];
