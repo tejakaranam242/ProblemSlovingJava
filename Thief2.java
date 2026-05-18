@@ -30,7 +30,7 @@ public class Thief2 {
         for(int i=0;i< input.length;i++){
             arr[i] = Integer.parseInt(input[i]);
         }
-        TrappingRainWater obj = new TrappingRainWater();
-        System.out.println("Result: "+obj.maxWater(arr));
+        Thief2 obj = new  Thief2();
+        System.out.println("Result: "+obj.maxValue(arr));
     }
 }
