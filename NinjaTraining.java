@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class NinjaTraining {
     // static int maxResult(int day,int last,int[][] mat,int[][] dp){
     //     if(day==0){
@@ -36,5 +38,17 @@ public class NinjaTraining {
             }
         }
         return dp[mat.length-1][3];
+    }
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int n= scanner.nextInt();
+        int[][] mat = new int[9][9];
+        for(int i=0;i<n;i++){
+            for(int j=0;j<3;j++){
+                mat[i][j] = scanner.nextInt();
+            }
+        }
+        NinjaTraining obj = new NinjaTraining();
+        System.out.println("Result: "+obj.maximumPoints(mat));
     }
 }
