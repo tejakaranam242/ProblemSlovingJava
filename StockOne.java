@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class public class StockOne {
+public class StockOne {
     public int maxProfit(int[] arr) {
         int min = arr[0];
         int ans = 0;
